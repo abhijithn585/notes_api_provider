@@ -20,7 +20,7 @@ NotesModel _$NotesModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NotesModel {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
@@ -36,7 +36,7 @@ abstract class $NotesModelCopyWith<$Res> {
           NotesModel value, $Res Function(NotesModel) then) =
       _$NotesModelCopyWithImpl<$Res, NotesModel>;
   @useResult
-  $Res call({String id, String name, String description});
+  $Res call({String? id, String name, String description});
 }
 
 /// @nodoc
@@ -52,15 +52,15 @@ class _$NotesModelCopyWithImpl<$Res, $Val extends NotesModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? description = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -81,7 +81,7 @@ abstract class _$$NotesModelImplCopyWith<$Res>
       __$$NotesModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name, String description});
+  $Res call({String? id, String name, String description});
 }
 
 /// @nodoc
@@ -95,15 +95,15 @@ class __$$NotesModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? description = null,
   }) {
     return _then(_$NotesModelImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -119,14 +119,13 @@ class __$$NotesModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$NotesModelImpl with DiagnosticableTreeMixin implements _NotesModel {
-  _$NotesModelImpl(
-      {required this.id, required this.name, required this.description});
+  _$NotesModelImpl({this.id, required this.name, required this.description});
 
   factory _$NotesModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesModelImplFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   final String name;
   @override
@@ -178,7 +177,7 @@ class _$NotesModelImpl with DiagnosticableTreeMixin implements _NotesModel {
 
 abstract class _NotesModel implements NotesModel {
   factory _NotesModel(
-      {required final String id,
+      {final String? id,
       required final String name,
       required final String description}) = _$NotesModelImpl;
 
@@ -186,7 +185,7 @@ abstract class _NotesModel implements NotesModel {
       _$NotesModelImpl.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   String get name;
   @override

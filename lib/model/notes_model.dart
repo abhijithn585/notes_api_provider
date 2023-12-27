@@ -25,7 +25,7 @@ part 'notes_model.g.dart';
 @freezed
 class NotesModel with _$NotesModel {
   factory NotesModel({
-    required String id,
+     String? id,
     required String name,
     required String description,
   }) = _NotesModel;
