@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes/model/model.dart';
+import 'package:notes/model/notes_model.dart';
 import 'package:notes/service/api_service.dart';
 
 class HomeProvider extends ChangeNotifier {
